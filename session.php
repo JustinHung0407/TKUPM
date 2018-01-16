@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: h4090
- * Date: 2017/12/26
- * Time: 下午 04:14
- */
-
 	session_start();
 
 	require_once 'User.php';
@@ -17,5 +10,5 @@
 	if(!$session->is_loggedin())
     {
         // session no set redirects to login page
-        $session->redirect('login.php');
+        $session->redirect('login.php?denied=true');
     }
