@@ -103,6 +103,12 @@ gulp.task('copy', function() {
   gulp.src(['node_modules/chart.js/dist/*.js'])
     .pipe(gulp.dest('vendor/chart.js'))
 
+  gulp.src(['node_modules/layui-laydate/dist/laydate.js',
+            'node_modules/layui-laydate/dist/**/**/*',
+            'node_modules/layui-laydate/dist/**/**/**/*'
+    ])
+    .pipe(gulp.dest('vendor/laydate'))
+
   gulp.src([
       'node_modules/datatables.net/js/*.js',
       'node_modules/datatables.net-bs4/js/*.js',

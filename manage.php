@@ -45,9 +45,12 @@ if ($_SESSION['level'] != 1) {
     <div class="container-fluid">
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fa fa-list" aria-hidden="true"></i>管理者列表
-                <a href="register.php" class="btn btn-success btn-sm float-right"><i class="fa fa-plus"
-                                                                                     aria-hidden="true"></i>Add User</a>
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <span>管理者列表</span>
+                <a href="register.php" class="btn btn-success btn-sm float-right">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <span>Add User</span>
+                </a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

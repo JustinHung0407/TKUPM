@@ -1,8 +1,10 @@
 <?php
 
 require_once("session.php");
-require_once("User.php");
 $auth_user = new USER();
+
+
+
 
 $stmt = $auth_user->runQuery("SELECT * FROM `package_info` WHERE recipients=:recipients AND is_pick = FALSE");
 $stmt->execute(array(':recipients' => $_SESSION['username']));
@@ -34,7 +36,7 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 <body>
 <nav class="navbar navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">學生郵務系統</a>
+        <a class="navbar-brand" href="student.php">學生郵務系統</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -48,6 +50,7 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
                            data-toggle="dropdown" aria-haspopup="true"
                            aria-expanded="false"><?php echo 'Hi, '.$_SESSION['username'] ?></a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="setting.php">Setting</a>
                             <a class="dropdown-item" href="logout.php?logout=true">Logout</a>
                         </div>
                     </div>
@@ -58,7 +61,11 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 </nav>
 <div class="container">
     <br>
-
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Home</li>
+        </ol>
+    </nav>
     <div class="card">
         <div class="card-header">
             Package Notification
@@ -124,7 +131,7 @@ $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         </div>
     </div>
 </div>
-<footer class="sticky-footer">
+<footer class="sticky-footer" style="width: 100% !important;">
     <div class="container">
         <div class="text-center">
             <small>Copyright © CHENMT 2017-2018</small>

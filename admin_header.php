@@ -1,4 +1,3 @@
-
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.php">學生郵務系統</a>
@@ -9,19 +8,40 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                <a class="nav-link" href="index.php">
-                    <i class="fa fa-archive" aria-hidden="true"></i>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="pkg">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#menu"
+                   data-parent="#exampleAccordion">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     <span class="nav-link-text">包裹管理</span>
                 </a>
+                <ul class="sidenav-second-level collapse" id="menu">
+                    <li>
+                        <a href="index.php">
+                            <i class="fa fa-archive" aria-hidden="true"></i>
+                            <span>包裹新增</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="history.php">
+                            <i class="fa fa-history" aria-hidden="true"></i>
+                            <span>包裹歷史</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <?php if($_SESSION['level'] == 1){?>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-                <a class="nav-link" href="manage.php">
-                    <i class="fa fa-user-secret" aria-hidden="true"></i>
-                    <span class="nav-link-text">學生管理</span>
-                </a>
-            </li>
+            <!--            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">-->
+            <!--                <a class="nav-link" href="index.php">-->
+            <!--                    <i class="fa fa-archive" aria-hidden="true"></i>-->
+            <!--                    <span class="nav-link-text">包裹管理</span>-->
+            <!--                </a>-->
+            <!--            </li>-->
+            <?php if ($_SESSION['level'] == 1) { ?>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                    <a class="nav-link" href="manage.php">
+                        <i class="fa fa-user-secret" aria-hidden="true"></i>
+                        <span class="nav-link-text">學生管理</span>
+                    </a>
+                </li>
             <?php } ?>
         </ul>
         <ul class="navbar-nav sidenav-toggler">
@@ -34,7 +54,7 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                    <i class="fa fa-fw fa-sign-out"></i><?php echo $_SESSION['user_session']; ?></a>
             </li>
         </ul>
     </div>
