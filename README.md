@@ -1,11 +1,12 @@
-# TKU i Life[http://web.lanyang.tku.edu.tw/](http://web.lanyang.tku.edu.tw/)
+# Lanyang iLife 2.0[(http://web.lanyang.tku.edu.tw/)](http://web.lanyang.tku.edu.tw/)
+
+## Preview 
+![image](https://github.com/JustinHung0407/TKUPM/blob/master/Lanyang_iLife%20_2.0_preview.png)
 
 ## [Start Bootstrap - SB Admin](https://startbootstrap.com/template-overviews/sb-admin/)
 
 Fork from :
 [SB Admin](http://startbootstrap.com/template-overviews/sb-admin/) is an open source, admin dashboard template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
-
-## Preview
 
 
 ## Status
